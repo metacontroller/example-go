@@ -54,16 +54,13 @@ kubectl delete -f thing-controller.yaml
 
 ### Building
 
-You don't need to build to run the example above,
-but if you make changes:
+We use `goreleaser` to build. Once is installed, run
 
 ```sh
-go mod vendor
-go build -o thing-controller
+make build
 ```
-
-Or just make a new container image:
+or just make a new container image:
 
 ```sh
-docker build . -t thing-controller
+make image
 ```
